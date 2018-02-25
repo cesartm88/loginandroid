@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         options =new String[]{"1","2","3","3"};
         addOptions(options);
-
+        startNewActivity();
 
     }
 

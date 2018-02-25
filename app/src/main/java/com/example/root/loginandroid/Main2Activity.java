@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -40,9 +41,17 @@ public class Main2Activity extends AppCompatActivity {
         String usuario = intent.getStringExtra("USUARIO");
         String password = intent.getStringExtra("PASSWORD");
         String escuela = intent.getStringExtra("ESCUELA");
-        if(usuario==usuario_ref && password==password_ref){
+        Log.i("LOGIN",usuario);
+        Log.i("LOGIN",password);
+        Log.i("LOGIN",usuario_ref);
+        Log.i("LOGIN",password_ref);
+        if(usuario.equals(usuario_ref) && password.equals(password_ref)){
             TextView txt= (TextView) findViewById(R.id.textView5);
             txt.setText("Bienvenido "+usuario+" de la escuela "+escuela);
+        }else{
+            Log.i("tes","tes");
+            TextView txt= (TextView) findViewById(R.id.textView5);
+            txt.setText("Usuario incorrecto");
         }
 
     }
