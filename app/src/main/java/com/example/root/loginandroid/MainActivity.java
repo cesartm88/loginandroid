@@ -17,7 +17,7 @@ import android.widget.Spinner;
 public class MainActivity extends AppCompatActivity {
 
     private Spinner spinner;
-    private String[] options;
+    private String[] colores;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         spinner=(Spinner) findViewById(R.id.spinner);
 
-        options =new String[]{"1","2","3","3"};
-        addOptions(options);
+        colores =new String[]{"rojo","blanco","negro"};
+        addColores(colores);
         startNewActivity();
 
     }
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 EditText editText2=(EditText) findViewById(R.id.editText3);
                 String nombre = editText.getText().toString();
                 String password_= editText2.getText().toString();
-                String nombre_escuela="Benito Juarez";
+                String nombre_escuela="Fes Aragón";
                 intent.putExtra("USUARIO",nombre);
                 intent.putExtra("PASSWORD",password_);
                 intent.putExtra("ESCUELA",nombre_escuela);
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void addOptions(String[] options){
+    private void addColores(String[] options){
         ArrayAdapter<String> spinnerArrayAdapter= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, options);
         spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
         spinner.setAdapter(spinnerArrayAdapter);

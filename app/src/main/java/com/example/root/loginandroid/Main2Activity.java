@@ -36,8 +36,8 @@ public class Main2Activity extends AppCompatActivity {
         }
 
         Intent intent = getIntent();
-        String usuario_ref="Cesar11";
-        String password_ref="12345678";
+        String usuario_ref="Hitler";
+        String password_ref="siegheil";
         String usuario = intent.getStringExtra("USUARIO");
         String password = intent.getStringExtra("PASSWORD");
         String escuela = intent.getStringExtra("ESCUELA");
